@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Registrar Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text id="title">
+    <h2>Selecciona la Asignatura para Registrar tu Asistencia</h2>
+  </ion-text>
+  <br><br>  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <div *ngFor="let asignatura of asignaturas">
+          <app-asignatura [asignatura]="asignatura"></app-asignatura>
+        </div>
+      </ion-card-subtitle>
+    </ion-card-header>
+  
+  </ion-card>
+
+  <qrcode 
+    [qrdata]="'Your data string'" 
+    [width]="256" 
+    [errorCorrectionLevel]="'M'">
+  </qrcode>
+
+
+
+
+</ion-content>

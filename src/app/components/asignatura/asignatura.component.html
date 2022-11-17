@@ -1,0 +1,33 @@
+<div *ngIf="asignatura">
+
+  <ion-card class="animate__animated animate__backInRight" (click)="setOpen(true)">
+    <ion-card-header color="tertiary">
+      <ion-card-subtitle>Asignatura: {{asignatura.nombre}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+</div>
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Registrar Asistencia</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)">Cerrar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <br><br><br><br><br><br><br>
+        <div id="qrcode">
+          <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaE6N55KHzo%26ab_channel%3DImpactMusic&s=8&e=m" alt="Generador de Códigos QR Codes"/>
+          <br/>
+          </div>
+          <br>
+          <ion-button  color="tertiary" (click)="guardarAsignaturas()" expand="block" shape="round">
+            Registrar Asistencia
+          </ion-button>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

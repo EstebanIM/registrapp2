@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" mode="ios"></ion-back-button>
+      
+    </ion-buttons>
+    <ion-title class="ion-text-center">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <br><br><br><br><br><br><br><br><br>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input required type="text" name="usrname" [(ngModel)]="datos.username" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input required type="password" name="pass" [(ngModel)]="datos.password" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="email" name="mail" [(ngModel)]="datos.correo" required></ion-input>
+    </ion-item>
+    <ion-button class="ion-margin-top" (click)="registrar()" expand="full" color="tertiary" shape="round"
+     type="submit" [disabled]="form.invalid" >
+      Crear cuenta
+    </ion-button>
+
+    <ion-button expand="full" shape="round" color="tertiary" class="ion-text-center ion-margin-top" routerLink="/login">
+      <p>Volver al login</p>
+    </ion-button>
+  </form>
+</ion-content>

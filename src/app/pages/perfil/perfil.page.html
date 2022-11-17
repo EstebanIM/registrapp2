@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title class="ion-text-center" id="header">Mi Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  <ion-list *ngIf="info">
+    <ion-item>
+
+      <ion-label>
+        <ion-text color="tertiary">
+          <h2>Correo</h2>
+        </ion-text>
+        {{info.correo}}
+      </ion-label>
+      <ion-icon (click)="editAtributo('correo')" color="tertiary" slot="end" name="create"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label>
+        <ion-text color="tertiary">
+          <h2>Nombre</h2>
+        </ion-text>
+        {{info.username}}
+      </ion-label>
+      <ion-icon (click)="editAtributo('username')" color="tertiary" slot="end" name="create"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+  
+  <ion-button class="ion-padding" (click)="logout()" color="tertiary" expand="full" shape="round">
+    Cerrar Sesion
+  </ion-button>
+
+</ion-content>
