@@ -14,6 +14,7 @@ export interface Asignatura {
 }
 
 export interface Asistencia { 
+    id: string;
     fecha: any;
     nombre: string;
 }

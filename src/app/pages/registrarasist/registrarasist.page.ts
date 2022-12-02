@@ -24,8 +24,6 @@ export class RegistrarasistPage implements OnInit {
     const path = 'Asignaturas/';
     this.firestore.getCollection<Asignatura>(path).subscribe(res => {
       this.asignaturas = res;
-      console.log(res);
-      
     });
   }
 

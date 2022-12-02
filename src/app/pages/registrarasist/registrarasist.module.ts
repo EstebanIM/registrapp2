@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RegistrarasistPageRoutingModule } from './registrarasist-routing.module';
 import { RegistrarasistPage } from './registrarasist.page';
-import { ComponentsModule } from 'src/app/components/asignatura/components.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({

@@ -1,0 +1,33 @@
+<div *ngIf="asignatura" >
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{asignatura.nombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+
+      <ion-accordion-group>
+
+        <ion-accordion value="first">
+          
+          <ion-item slot="header" color="light">
+            <ion-label></ion-label>
+          </ion-item>
+
+            <div *ngFor="let item of asistencia">
+              <div class="ion-padding" slot="content">
+                
+                {{item.fecha.seconds*1000}}
+
+              </div>
+            </div>
+
+        </ion-accordion>
+
+      </ion-accordion-group>
+
+    </ion-card-content>
+  </ion-card>
+
+</div>

@@ -20,9 +20,12 @@
     <ion-content class="ion-padding">
       <br><br><br><br><br><br><br>
         <div id="qrcode">
-          <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaE6N55KHzo%26ab_channel%3DImpactMusic&s=8&e=m" alt="Generador de Códigos QR Codes"/>
           <br/>
           </div>
+          <br><br><br><br><br><br><br><br>
+          <ion-button  color="tertiary" (click)="scan()" expand="block" shape="round">
+            Escanear Codigo QR
+          </ion-button>
           <br>
           <ion-button  color="tertiary" (click)="guardarAsignaturas()" expand="block" shape="round">
             Registrar Asistencia

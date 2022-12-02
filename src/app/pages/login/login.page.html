@@ -1,34 +1,44 @@
 <ion-header>
   <ion-toolbar color="tertiary">
-    <ion-title class="ion-text-center">Inicio Sesión</ion-title>
+    <ion-title class="ion-text-center">Inicio de Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<ion-card color="tertiary">
+  <ion-card-content >
+      <ion-label id="logintext" position="stacked">Correo</ion-label>
+      <ion-input id="logininput" required type="text" name="Email" [(ngModel)]="usuario.correo" ></ion-input>
 
-<ion-content class="ion-padding">
-  <br><br><br><br><br><br><br><br><br><br>
-
-      <ion-item>
-        <ion-label position="stacked">Correo</ion-label>
-        <ion-input required type="text" name="Email" [(ngModel)]="usuario.correo" ></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked">Clave</ion-label>
-        <ion-input required type="password" name="pass" [(ngModel)]="usuario.password" ></ion-input>
-      </ion-item>
+      <ion-label id="logintext" position="stacked">Clave</ion-label>
+      <ion-input  id="logininput" required type="password" name="pass" [(ngModel)]="usuario.password" ></ion-input>
 
 
 <form #form="ngForm" (ngSubmit)="onSubmit()">
-  <ion-button shape="round" expand="full" color="tertiary"
-   type="submit" [disabled]="form.invalid" class="ion-margin-top">
-    Iniciar Sesión
-  </ion-button>
+<ion-button shape="round" expand="full" color="light"
+ type="submit" [disabled]="form.invalid" class="ion-margin-top">
+  <ion-text color="tertiary">
+    <h2 id="button">Iniciar Sesión</h2>
+  </ion-text>
+</ion-button>
 </form>
 
-<ion-button expand="full" shape="round" color="tertiary" class="ion-text-center ion-margin-top" routerLink="/registro">
-  <p>Registrarse</p>
+<ion-button expand="full" shape="round" color="light" class="ion-text-center ion-margin-top" routerLink="/registro">
+  <ion-text color="tertiary">
+    <h2 id="button">Registrarse</h2>
+  </ion-text>
 </ion-button>
+<br>
+<ion-text color="dark">
+  <h4 id="forgot">¿Olvidaste tu clave? <a id="forgot" [routerLink]="['/forgot-password']">Recupérala aqui</a></h4>
+</ion-text>
+
+  </ion-card-content>
+</ion-card>
+
+<ion-content class="ion-padding">
+
+
 
 
 

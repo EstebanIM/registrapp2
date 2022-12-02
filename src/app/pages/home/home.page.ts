@@ -59,7 +59,6 @@ info: Usuario = {uid:'',
       if (res !==undefined) {
         this.info = res;
       }
-      console.log('datos son ->', res);
     })
   }
 

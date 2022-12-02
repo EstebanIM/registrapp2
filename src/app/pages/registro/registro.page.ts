@@ -32,15 +32,12 @@ export class RegistroPage implements OnInit {
   }
  
   async registrar() {
-    console.log('datos -> ', this.datos)
     const res = await this.auth.registrarUser(this.datos).catch( error => {
       this.interaction.closeLoading();
       this.interaction.presentLoading('Registrando...')
       this.interaction.presentToast('Error');
-      console.log('error');
     })
-    if (res) { 
-      console.log('exito');  
+    if (res) {  
       const path = 'Usuarios';
       const id = res.user.uid;
       this.datos.uid = id;

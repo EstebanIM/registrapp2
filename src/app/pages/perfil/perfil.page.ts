@@ -31,7 +31,6 @@ export class PerfilPage implements OnInit {
               private interactionService: InteractionService,
               private rt:Router) {
                 this.authService.stateUser().subscribe( res => {
-                  console.log('en perfil - estado autenticacion -> ', res);
                   if (res !==null){
                     this.uid=res.uid;
                     this.getInfoUser(this.uid);
@@ -49,7 +48,6 @@ export class PerfilPage implements OnInit {
         if (res !==undefined) {
           this.info = res;
         }
-        console.log('datos son ->', res);
       })
     }
 
@@ -73,7 +71,6 @@ export class PerfilPage implements OnInit {
           text: 'Confirmar',
           role: 'confirm',
           handler: (ev) => {
-            console.log('confirm ok ->', ev);
             this.handlerMessage = 'Alerta confirmada';
             this.saveAtributo (name, ev[name])
           },
